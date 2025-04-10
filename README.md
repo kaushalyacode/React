@@ -61,3 +61,10 @@ A build tool like Vite helps developers transform and optimize their source code
 7. Code Splitting
    Breaks your app into smaller chunks so that only necessary code is loaded when needed.
 
+   ### Next Steps
+    ```
+      cd pegusas
+      npm install
+      npm run dev
+```
+
