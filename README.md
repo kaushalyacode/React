@@ -65,8 +65,7 @@ A build tool like Vite helps developers transform and optimize their source code
     ```
       cd pegusas
       npm install
-      npm run dev
-```
+      npm run dev```
 
 ### [L1 : 📁 Reference Folder Structures](https://github.com/kaushalyacode/React/tree/Create-Folder-Structure)
 
