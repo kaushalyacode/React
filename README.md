@@ -67,7 +67,7 @@ A build tool like Vite helps developers transform and optimize their source code
       npm install
       npm run dev```
 
-### [L1 : 📁 Reference Folder Structures](https://github.com/kaushalyacode/React/tree/Create-Folder-Structure)
+## [L1 : 📁 Reference Folder Structures](https://github.com/kaushalyacode/React/tree/Create-Folder-Structure)
 
 Here are some great repositories that demonstrate advanced React project folder structures:
 
@@ -75,3 +75,44 @@ Here are some great repositories that demonstrate advanced React project folder 
 - 🔗 [React Folder Structure by duthanhduoc](https://github.com/duthanhduoc/React-Folder-Structure/)
 - 🔗 [React Folder Structure by WebDevSimplified](https://github.com/WebDevSimplified/react-folder-structure/)
 - 🔗 [React folder structure vedio](https://www.youtube.com/watch?v=UUga4-z7b6s)
+
+## L3 : Class Component Life Cycle Methods
+
+    Phases
+        Mounting - When the instance of component is being created and inserted into the DOM.
+        Updating - When the component is being re-rendered as a result of changes to either its props or state.
+        Unmounting - When the component is being removed from the DOM.
+        Error-Handling - When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+    Methods
+        Mounting
+            constructor(props) 
+                - When new component created
+                - Initialize state
+                - Binding event handlers to class instance
+                - Do not cause side effects : Api calls
+                - have to call super(props) method.this will call base class constructor
+                - until super is called, this.props will not be available
+                - this is the only place where you can assign this.state
+            static getDerivedStateFromProps(props, state)
+                - this is rarely used method
+                - when the state of the component is depends on changes in props over time
+                - set the state
+                - since this is static method, you cannot use this keyword. so no this.setState.Have to return new state with new object
+                - Dont cause side effects
+                - get called befor render method
+                - if we recieve prop and we want to update state based on that prop, befor render method this is getting called
+                - return null if you dont want to update state
+                - can check state and props value befor returning new state
+            render()
+            componentDidMount()
+        Updating
+            static getDerivedStateFromProps()
+            shouldComponentUpdate()
+            render()
+            getSnapshotBeforeUpdate()
+            componentDidUpdate()
+        Unmounting
+            componentWillUnmount()
+        Error-Handling
+            static getDerivedStateFromError()
+            componentDidCatch()
