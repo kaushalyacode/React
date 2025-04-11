@@ -1,4 +1,4 @@
-# Lear React Practical
+# Learn React Practical
 ## L0 : Create React App
 
 ## 📦 Create the App
