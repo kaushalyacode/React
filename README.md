@@ -76,7 +76,7 @@ Here are some great repositories that demonstrate advanced React project folder 
 - 🔗 [React Folder Structure by WebDevSimplified](https://github.com/WebDevSimplified/react-folder-structure/)
 - 🔗 [React folder structure vedio](https://www.youtube.com/watch?v=UUga4-z7b6s)
 
-## L3 : Class Component Life Cycle Methods
+## [L3 : Class Component Life Cycle Methods](https://github.com/kaushalyacode/React/tree/React-Life-Cycle)
 
 ### Phases    
     
