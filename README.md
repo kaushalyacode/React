@@ -157,3 +157,45 @@ Here are some great repositories that demonstrate advanced React project folder 
   
    ***1.static getDerivedStateFromError()***  
    ***2.componentDidCatch()***  
+
+## [L4 : Creating Components]()
+
+### Importing and Exporting Components
+
+### Named Export
+```javascript
+export const name = "Jesse";
+export const age = 40;
+
+//or
+
+const name = "Jesse";
+const age = 40;
+
+export {name, age};
+```
+### Default Export
+```javascript
+const message = () => {
+const name = "Jesse";
+const age = 40;
+return name + ' is ' + age + 'years old.';
+};
+
+export default message;
+```
+
+In default export we can have only one default export in a file.
+
+### Importing 
+```
+//Named 
+javascript
+
+import { name, age } from "./person.js";
+
+//default
+import message from "./message.js";
+```
+
+To import files from nested folders we use **[barrel Pattern](https://namastedev.com/blog/understanding-the-barrel-pattern-in-javascript-typescript/)**.
