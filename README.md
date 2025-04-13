@@ -78,12 +78,12 @@ Here are some great repositories that demonstrate advanced React project folder 
 
 ## L3 : Class Component Life Cycle Methods
 
-    Phases
+Phases
         Mounting - When the instance of component is being created and inserted into the DOM.
         Updating - When the component is being re-rendered as a result of changes to either its props or state.
         Unmounting - When the component is being removed from the DOM.
         Error-Handling - When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
-    Methods
+Methods
         Mounting
             constructor(props) 
                 - When new component created
@@ -104,7 +104,14 @@ Here are some great repositories that demonstrate advanced React project folder 
                 - return null if you dont want to update state
                 - can check state and props value befor returning new state
             render()
+                - this is the only required method in class component
+                - read this.props and this.state rerturn jsx which describe the UI
+                - do not cause side effects, state changes, interact with dom
+                - this has all child components, so childrens life cycle methods will be called after this.
             componentDidMount()
+                -  only once get called in life cycle
+                -  invoked immediately after a component and all its children components have been rendered to the DOM
+                -  Can cause side effects : Interact with DOM or Peform API calls
         Updating
             static getDerivedStateFromProps()
             shouldComponentUpdate()
