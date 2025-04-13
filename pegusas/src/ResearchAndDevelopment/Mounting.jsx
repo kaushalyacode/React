@@ -22,6 +22,20 @@ export class Mounting extends React.Component {
         return null;
     }
 
+    shouldComponentUpdate(nextProps, nextState) {       
+        console.log('shouldComponentUpdate called : M');
+        return true;
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('getSnapshotBeforeUpdate called : M');
+        return null;
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('componentDidUpdate called : M');
+    }
+
     componentDidMount() {
         console.log('componentDidMount called : M');
     }

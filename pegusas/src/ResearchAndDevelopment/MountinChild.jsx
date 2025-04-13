@@ -24,6 +24,19 @@ export class MountinChild extends React.Component {
     componentDidMount() {
         console.log('componentDidMount called : MC');
     }
+    shouldComponentUpdate(nextProps, nextState) {       
+        console.log('shouldComponentUpdate called : Mc');
+        return true;
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('getSnapshotBeforeUpdate called : Mc');
+        return null;
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('componentDidUpdate called : Mc');
+    }
 
     render() {
         console.log('render called : MC')
