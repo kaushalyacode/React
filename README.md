@@ -117,13 +117,36 @@ Here are some great repositories that demonstrate advanced React project folder 
                 -  invoked immediately after a component and all its children components have been rendered to the DOM  
                 -  Can cause side effects : Interact with DOM or Peform API calls  
     **Updating**  
-            static getDerivedStateFromProps()  
-            shouldComponentUpdate()  
-            render()  
-            getSnapshotBeforeUpdate()  
-            componentDidUpdate()  
-     Unmounting  
-            componentWillUnmount()
-        Error-Handling
-            static getDerivedStateFromError()
-            componentDidCatch()
+        ***static getDerivedStateFromProps(props, state)***  
+                - getting called every time componenet get rerendered  
+        ***shouldComponentUpdate(nextProps ,nextState)***  
+                - recieved updated props and state
+                - Performance optimization
+                - dictate if component should rendered or not , when prop state change
+                - compare existing props and state with next values
+                - return false for stop render
+                - else return true
+                - Rarely used
+                - Do not cause side effects
+                - Do not call seStates
+        ***render()***  
+        ***getSnapshotBeforeUpdate(prevProps, prevState)***
+                -  Rarely used
+                -  Called right before changes  from virtusal DOM are to be refleced in the DOM.
+                -  Capture some information from the DOM.
+                -  Ex: Read scroll position and after update , with some calculation maintain same scroll position
+                -  return null or value.if value , its passed to next method as third parameter.
+                -  as i undestood, only way to use this value is as third param of componentdidupdate.
+        ***componentDidUpdate(prevProp, prevState, snapshot)***
+                - after render is finished in rerendered cycle
+                - accept prevoous state, props and returnd value from getsnapshotbeforupdate method
+                - call only once in each rerender cycle
+                - can make side effects.Beofr that we can do previous and current props and state values.
+     **Unmounting**
+        ***componentWillUnmount()***
+                - method is invoked immediately befor component is unmount or destroy.
+                - perform cleanup tasks  such as canceling any network requests, removing event handlers, cancelling any subscriptions and also invalidating timers such as settimeout or setinterval
+                - don't set state here 
+     **Error-Handling**
+        ***static getDerivedStateFromError()***
+        ***componentDidCatch()***
