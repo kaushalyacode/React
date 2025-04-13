@@ -65,7 +65,8 @@ A build tool like Vite helps developers transform and optimize their source code
     ```
       cd pegusas
       npm install
-      npm run dev```
+      npm run dev
+    ```
 
 ## [L1 : 📁 Reference Folder Structures](https://github.com/kaushalyacode/React/tree/Create-Folder-Structure)
 
@@ -78,13 +79,16 @@ Here are some great repositories that demonstrate advanced React project folder 
 
 ## L3 : Class Component Life Cycle Methods
 
-Phases
+  Phases
+  
         Mounting - When the instance of component is being created and inserted into the DOM.
         Updating - When the component is being re-rendered as a result of changes to either its props or state.
         Unmounting - When the component is being removed from the DOM.
         Error-Handling - When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+
 Methods
-        Mounting
+
+    Mounting
             constructor(props) 
                 - When new component created
                 - Initialize state
