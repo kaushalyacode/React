@@ -1,9 +1,11 @@
 import { Mounting } from './ResearchAndDevelopment/Mounting'
 import React, { Component } from "react";
+import { TextInput } from './components/form';
 export class App extends React.Component {
     render() {
         return (
-            <Mounting name='k'/>
+            <TextInput />
+            //<Mounting name='k'/>
         )
     }  
 }
